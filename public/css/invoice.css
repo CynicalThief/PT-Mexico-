@@ -1,0 +1,189 @@
+
+
+html, body
+{
+    margin: 0;
+    min-height: 100%;
+}
+
+body
+{
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+    box-sizing: border-box;
+
+    background: url('/webPhoto/mintTile.png') repeat;
+}
+
+
+
+.invoicePage {
+    width: min(90vw, 800px);
+
+    margin: 40px auto;
+
+    box-sizing: border-box;
+}
+
+.invoicePanel {
+    padding: 25px;
+
+    box-sizing: border-box;
+
+    background: url('/webPhoto/grayTileSmall.png') repeat;
+
+    border: 2px solid;
+
+    border-top-color: #f5f5f5;
+    border-left-color: #f5f5f5;
+    border-right-color: #666;
+    border-bottom-color: #666;
+
+    box-shadow:
+        2px 2px 0 #333,
+        4px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.invoiceHeader {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #777;
+}
+
+.invoiceHeader h1 {
+    margin: 0 0 10px;
+}
+
+.invoiceHeader p {
+    margin: 0;
+}
+
+.shippingInfo {
+    margin: 20px 0;
+    padding: 12px;
+    background: #ddd;
+    border: 2px solid;
+    border-top-color: #777;
+    border-left-color: #777;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.shippingInfo p {
+    margin: 5px 0;
+}
+
+.invoiceTableWrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.invoiceTable {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #ddd;
+}
+
+.invoiceTable th,
+.invoiceTable td {
+    padding: 10px;
+
+    border: 2px solid #777;
+
+    text-align: left;
+}
+
+.invoiceTable th {
+    background: #FFD21F;
+    color: #3a2a00;
+
+    font-family: 'QuickGear';
+
+    text-shadow:
+        1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.invoiceTable td:nth-child(3) {
+    text-align: center;
+}
+
+.invoiceTable td:last-child,
+.invoiceTable th:last-child {
+    text-align: right;
+}
+
+.invoiceTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 20px;
+    padding: 15px;
+
+    background: #ddd;
+
+    border: 2px solid;
+
+    border-top-color: #fff;
+    border-left-color: #fff;
+    border-right-color: #777;
+    border-bottom-color: #777;
+
+    box-shadow:
+        2px 2px 0 #555;
+
+    font-family: 'QuickGear';
+
+    font-size: 22px;
+
+    color: #FFBF00;
+
+    text-shadow:
+        2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.invoiceActions {
+    display: flex;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+@media print {
+
+    body {
+        background: white !important;
+    }
+
+    .invoicePage {
+        width: 100%;
+        margin: 0;
+    }
+
+    .invoicePanel {
+        border: none;
+        box-shadow: none;
+        background: white;
+    }
+
+    .invoiceActions {
+        display: none;
+    }
+
+    .invoiceTable th {
+        background: #ddd !important;
+        color: black;
+        text-shadow: none;
+    }
+
+}
