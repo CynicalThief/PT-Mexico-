@@ -12,9 +12,10 @@
             <h2 class="tit">Register</h2>
             <form action="/register" method="POST" class="form">
                 @csrf
-                <input name="name" type="text" placeholder="Name(Min:3 Max:20)" class="inp">
+                <input name="name" type="text" placeholder="Name(3-40)" class="inp">
                 <input name="email" type="text" placeholder="Email" class="inp">
-                <input name="password" type="password" placeholder="Password(min:8)" class="inp">
+                <input name="phoneN" type="number" placeholder="Phone Number(08-)" class="inp">
+                <input name="password" type="password" placeholder="Password(6-12)" class="inp">
                 <button>Register</button>
             </form>
         </div>

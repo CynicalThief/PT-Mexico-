@@ -27,10 +27,10 @@ class UserControl extends Controller
     public function register(Request $request)
     {
         $incomingFields =  $request->validate([
-            'name' => ['required', 'min:3', 'max:20', Rule::unique('users','name')],
+            'name' => ['required', 'min:3', 'max:40', Rule::unique('users','name')],
             'email' => ['required', 'email', Rule::unique('users','email')],
-            'password' => ['required', 'min:8', 'max:200', Rule::unique('users', 'password')],
-
+            'password' => ['required', 'min:6', 'max:12', Rule::unique('users', 'password')],
+            'phoneN' => ['required', 'string', 'regex:/^08/'],
 
 
         ]);
